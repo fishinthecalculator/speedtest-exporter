@@ -59,8 +59,7 @@ def runTest():
     timeout = int(os.environ.get('SPEEDTEST_TIMEOUT', 90))
 
     cmd = [
-        "speedtest", "--format=json-pretty", "--progress=no",
-        "--accept-license", "--accept-gdpr"
+        "speedtest", "--json"
     ]
     if serverID:
         cmd.append(f"--server-id={serverID}")
